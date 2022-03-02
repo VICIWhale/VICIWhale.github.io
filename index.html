@@ -130,7 +130,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -141,7 +141,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -197,7 +197,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/02/25/STL/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/03/02/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E6%A8%A1%E6%9D%BF/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/text.png">
@@ -210,7 +210,88 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/02/25/STL/" class="post-title-link" itemprop="url">STL</a>
+          <a href="/2022/03/02/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E6%A8%A1%E6%9D%BF/" class="post-title-link" itemprop="url">数据结构模板</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2022-03-02 17:06:06 / 修改时间：17:10:36" itemprop="dateCreated datePublished" datetime="2022-03-02T17:06:06+08:00">2022-03-02</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/C/" itemprop="url" rel="index"><span itemprop="name">C++</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="数据结构模板"><a href="#数据结构模板" class="headerlink" title="数据结构模板"></a>数据结构模板</h1><h3 id="1-链表"><a href="#1-链表" class="headerlink" title="1.链表"></a>1.链表</h3><h6 id="1-0-单链表-数组模拟版"><a href="#1-0-单链表-数组模拟版" class="headerlink" title="1.0 单链表(数组模拟版)"></a>1.0 单链表(数组模拟版)</h6><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> head,idx,e[N],ne[N],x,k;<span class="comment">//第一个插入的数字是1</span></span><br><span class="line"><span class="comment">//初始化</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">init</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    head = <span class="number">-1</span>;</span><br><span class="line">    idx = <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//插入头结点</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">insert_head</span><span class="params">(<span class="type">int</span> x)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    ne[idx] = head;</span><br><span class="line">    e[idx] = x;</span><br><span class="line">    head = idx;</span><br><span class="line">    idx ++;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//删除第k个插入的数字的后面的数字</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">del</span><span class="params">(<span class="type">int</span> k)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    ne[k] = ne[ne[k]];</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//在第k个插入的数字后插入一个数字</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">insert_mid</span><span class="params">(<span class="type">int</span> k ,<span class="type">int</span> x)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    ne[idx] = ne[k];</span><br><span class="line">    e[idx] = x;</span><br><span class="line">    ne[k] = idx;</span><br><span class="line">    idx ++;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//删除头结点</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">del_head</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    head = ne[head];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/03/02/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E6%A8%A1%E6%9D%BF/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/02/25/%E5%B8%B8%E7%94%A8STL%E5%AE%B9%E5%99%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/text.png">
+      <meta itemprop="name" content="VICI^^">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="VICI^^的小屋">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/02/25/%E5%B8%B8%E7%94%A8STL%E5%AE%B9%E5%99%A8/" class="post-title-link" itemprop="url">STL</a>
         </h2>
 
         <div class="post-meta-container">
@@ -228,7 +309,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-02-26 13:51:58" itemprop="dateModified" datetime="2022-02-26T13:51:58+08:00">2022-02-26</time>
+      <time title="修改时间：2022-03-02 17:10:11" itemprop="dateModified" datetime="2022-03-02T17:10:11+08:00">2022-03-02</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -236,7 +317,7 @@
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/STL/" itemprop="url" rel="index"><span itemprop="name">STL</span></a>
+          <a href="/categories/C/" itemprop="url" rel="index"><span itemprop="name">C++</span></a>
         </span>
     </span>
 
@@ -253,7 +334,7 @@
           <h1 id="STL"><a href="#STL" class="headerlink" title="STL"></a>STL</h1><h3 id="1-vector"><a href="#1-vector" class="headerlink" title="1.vector"></a>1.vector</h3><h6 id="1-1声明一个vector"><a href="#1-1声明一个vector" class="headerlink" title="1.1声明一个vector"></a>1.1声明一个vector</h6><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;vector&gt; // 头文件</span><br><span class="line"></span><br><span class="line">vector&lt;int&gt; a;</span><br><span class="line">vector&lt;int&gt; b[100];</span><br><span class="line">vector&lt;stru&gt; c; // stru 是自定义结构体类型</span><br></pre></td></tr></table></figure>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2022/02/25/STL/#more" rel="contents">
+              <a class="btn" href="/2022/02/25/%E5%B8%B8%E7%94%A8STL%E5%AE%B9%E5%99%A8/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -390,9 +471,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2022-02-15 19:43:49 / 修改时间：20:41:45" itemprop="dateCreated datePublished" datetime="2022-02-15T19:43:49+08:00">2022-02-15</time>
+      <time title="创建时间：2022-02-15 19:43:49" itemprop="dateCreated datePublished" datetime="2022-02-15T19:43:49+08:00">2022-02-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-03-02 17:04:55" itemprop="dateModified" datetime="2022-03-02T17:04:55+08:00">2022-03-02</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -414,11 +501,15 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> main</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-
+          <h1 id="基础算法复习"><a href="#基础算法复习" class="headerlink" title="基础算法复习"></a>基础算法复习</h1><h2 id="1-快速排序"><a href="#1-快速排序" class="headerlink" title="1.快速排序"></a>1.快速排序</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//算法复习</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N = <span class="number">100010</span>;</span><br><span class="line"><span class="type">int</span> a[N];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">quicksort</span><span class="params">(<span class="type">int</span> l,<span class="type">int</span> r)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(l&gt;=r)<span class="keyword">return</span>;</span><br><span class="line">	</span><br><span class="line">	<span class="type">int</span> i = l - <span class="number">1</span>,j = r + <span class="number">1</span>;</span><br><span class="line">	<span class="type">int</span> x = a[l+r&gt;&gt;<span class="number">1</span>];</span><br><span class="line">	<span class="keyword">while</span>(i&lt;j)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">do</span> i++;<span class="keyword">while</span>(a[i]&lt;x);</span><br><span class="line">		<span class="keyword">do</span> j--;<span class="keyword">while</span>(a[j]&gt;x);</span><br><span class="line">		<span class="keyword">if</span>(i&lt;j)<span class="built_in">swap</span>(a[i],a[j]);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">quicksort</span>(l,j);<span class="built_in">quicksort</span>(j+<span class="number">1</span>,r);<span class="comment">//这里下标用j</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	ios::<span class="built_in">sync_with_stdio</span>(<span class="number">0</span>);cin.<span class="built_in">tie</span>(<span class="number">0</span>);cout.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line">	<span class="type">int</span> n;</span><br><span class="line">	cin&gt;&gt;n;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>;i &lt;= n;i ++)cin&gt;&gt;a[i];<span class="comment">//读入数字</span></span><br><span class="line">	<span class="built_in">quicksort</span>(<span class="number">1</span>,n);</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>;i &lt;= n;i ++)cout&lt;&lt;a[i]&lt;&lt;<span class="string">&#x27; &#x27;</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/02/15/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
