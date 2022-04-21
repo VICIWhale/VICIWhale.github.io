@@ -22,28 +22,28 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.10.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
-  <meta name="description" content="Welcome to my Blog!">
+  <meta name="description" content="Windows —&gt; system()函数">
 <meta property="og:type" content="website">
-<meta property="og:title" content="标签">
-<meta property="og:url" content="http://example.com/tags/index.html">
+<meta property="og:title" content="system()函数(未完工)">
+<meta property="og:url" content="http://example.com/2022/04/21/system()/index.html">
 <meta property="og:site_name" content="VICI^^的小屋">
-<meta property="og:description" content="Welcome to my Blog!">
+<meta property="og:description" content="Windows —&gt; system()函数">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-02-15T08:08:50.000Z">
-<meta property="article:modified_time" content="2022-02-15T11:09:56.731Z">
+<meta property="article:published_time" content="2022-04-21T14:52:24.000Z">
+<meta property="article:modified_time" content="2022-04-21T14:55:00.571Z">
 <meta property="article:author" content="VICI^^">
+<meta property="article:tag" content="库函数">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://example.com/tags/">
+<link rel="canonical" href="http://example.com/2022/04/21/system()/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"zh-CN","comments":true,"permalink":"http://example.com/tags/index.html","path":"tags/index.html","title":"标签"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2022/04/21/system()/","path":"2022/04/21/system()/","title":"system()函数(未完工)"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>标签 | VICI^^的小屋
-</title>
+<title>system()函数(未完工) | VICI^^的小屋</title>
   
 
   <script src="/js/third-party/analytics/baidu-analytics.js"></script>
@@ -110,7 +110,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -123,6 +123,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Windows-%E2%80%94-gt-system-%E5%87%BD%E6%95%B0"><span class="nav-number">1.</span> <span class="nav-text">Windows —&gt; system()函数</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#%E6%B3%A8%E6%84%8F%EF%BC%9A%E5%9C%A8windows%E4%B8%8B%E7%9A%84system%E5%87%BD%E6%95%B0%E4%B8%AD%E5%91%BD%E4%BB%A4%E5%8F%AF%E4%BB%A5%E4%B8%8D%E5%8C%BA%E5%88%AB%E5%A4%A7%E5%B0%8F%E5%86%99%EF%BC%81"><span class="nav-number">1.0.0.0.0.1.</span> <span class="nav-text">注意：在windows下的system函数中命令可以不区别大小写！</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E5%90%8D%EF%BC%9A-system"><span class="nav-number">1.0.0.0.0.2.</span> <span class="nav-text">函数名： system</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E5%8A%9F-%E8%83%BD%EF%BC%9A-%E5%8F%91%E5%87%BA%E4%B8%80%E4%B8%AADOS%E5%91%BD%E4%BB%A4"><span class="nav-number">1.0.0.0.0.3.</span> <span class="nav-text">功 能： 发出一个DOS命令</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E7%94%A8-%E6%B3%95%EF%BC%9A-system-char-command"><span class="nav-number">1.0.0.0.0.4.</span> <span class="nav-text">用 法： system(char *command);</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E6%B3%A8%E6%84%8F%EF%BC%9A%E4%BB%A3%E7%A0%81%E5%9D%87%E4%B8%8D%E5%8C%BA%E5%88%86%E5%A4%A7%E5%B0%8F%E5%86%99"><span class="nav-number">1.0.0.0.0.5.</span> <span class="nav-text">注意：代码均不区分大小写</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E5%91%BD%E4%BB%A4%E6%A1%86%E9%85%8D%E8%89%B2"><span class="nav-number">1.0.0.1.</span> <span class="nav-text">1. 命令框配色</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E6%B8%85%E5%B1%8F"><span class="nav-number">1.0.1.</span> <span class="nav-text">2.清屏</span></a></li></ol></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -206,43 +207,102 @@
 </noscript>
 
 
-    <div class="main-inner page posts-expand">
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
   
   
 
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/04/21/system()/">
 
-    
-    
-    
-    <div class="post-block" lang="zh-CN"><header class="post-header">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/text.png">
+      <meta itemprop="name" content="VICI^^">
+      <meta itemprop="description" content="Welcome to my Blog!">
+    </span>
 
-<h1 class="post-title" itemprop="name headline">标签
-</h1>
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="VICI^^的小屋">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          system()函数(未完工)
+        </h1>
 
-<div class="post-meta-container">
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2022-04-21 22:52:24 / 修改时间：22:55:00" itemprop="dateCreated datePublished" datetime="2022-04-21T22:52:24+08:00">2022-04-21</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/C/" itemprop="url" rel="index"><span itemprop="name">C++</span></a>
+        </span>
+    </span>
+
+  
 </div>
 
-</header>
+        </div>
+      </header>
 
-      
-      
-      <div class="post-body"><div class="tag-cloud">
-  <div class="tag-cloud-title">
-    目前共计 7 个标签
-  </div>
-  <div class="tag-cloud-tags">
-    <a href="/tags/EasyX/" style="font-size: 12px;" class="tag-cloud-0">EasyX</a> <a href="/tags/Markdown/" style="font-size: 12px;" class="tag-cloud-0">Markdown</a> <a href="/tags/STL/" style="font-size: 12px;" class="tag-cloud-0">STL</a> <a href="/tags/%E5%BA%93%E5%87%BD%E6%95%B0/" style="font-size: 12px;" class="tag-cloud-0">库函数</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%EF%BC%88%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B%EF%BC%89/" style="font-size: 12px;" class="tag-cloud-0">数据结构（算法竞赛）</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%EF%BC%88%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0%EF%BC%89/" style="font-size: 30px;" class="tag-cloud-10">数据结构（课堂笔记）</a> <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 12px;" class="tag-cloud-0">算法</a>
-  </div>
-</div>
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="Windows-—-gt-system-函数"><a href="#Windows-—-gt-system-函数" class="headerlink" title="Windows —&gt; system()函数"></a>Windows —&gt; system()函数</h1><span id="more"></span>
 
-      </div>
-      
-      
-      
+<h6 id="注意：在windows下的system函数中命令可以不区别大小写！"><a href="#注意：在windows下的system函数中命令可以不区别大小写！" class="headerlink" title="注意：在windows下的system函数中命令可以不区别大小写！"></a>注意：在windows下的system函数中命令可以不区别大小写！</h6><h6 id="函数名：-system"><a href="#函数名：-system" class="headerlink" title="函数名： system"></a>函数名： system</h6><h6 id="功-能：-发出一个DOS命令"><a href="#功-能：-发出一个DOS命令" class="headerlink" title="功 能： 发出一个DOS命令"></a>功 能： 发出一个DOS命令</h6><h6 id="用-法：-system-char-command"><a href="#用-法：-system-char-command" class="headerlink" title="用 法： system(char *command);"></a>用 法： system(char *command);</h6><h6 id="注意：代码均不区分大小写"><a href="#注意：代码均不区分大小写" class="headerlink" title="注意：代码均不区分大小写"></a>注意：代码均不区分大小写</h6><hr>
+<h4 id="1-命令框配色"><a href="#1-命令框配色" class="headerlink" title="1. 命令框配色"></a>1. 命令框配色</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Eg: <span class="built_in">system</span>(<span class="string">&quot;color 0A&quot;</span>);</span><br><span class="line"><span class="comment">// 放在任何地方都可以着色</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// color后面第一个数字是背景色：0=黑色 1=蓝色 2=绿色 3=湖蓝色 4=红色 5=紫色 6=黄色 7=白色 8=灰色 9=淡蓝色</span></span><br><span class="line"><span class="comment">// color后面第二个字母是前景色（文字颜色）：A=淡绿色 B=淡浅绿色 C=淡红色 D=淡紫色 E=淡黄色 F=亮白色</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="2-清屏"><a href="#2-清屏" class="headerlink" title="2.清屏"></a>2.清屏</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">system</span>(<span class="string">&quot;cls&quot;</span>);</span><br><span class="line"><span class="comment">// 可以清除之前已经输出（显示)的所有字符</span></span><br></pre></td></tr></table></figure>
+
+
     </div>
 
     
     
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E5%BA%93%E5%87%BD%E6%95%B0/" rel="tag"># 库函数</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/04/21/EasyX/" rel="prev" title="EasyX图形库（未完工）">
+                  <i class="fa fa-chevron-left"></i> EasyX图形库（未完工）
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
 
 
 </div>
